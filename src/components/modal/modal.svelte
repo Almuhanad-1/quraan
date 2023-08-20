@@ -5,6 +5,7 @@
 	export let title;
 	export let closeModal;
 	export let location;
+	export let meaning;
 
 	let note = '';
 	function bgClickHandler(e) {
@@ -41,7 +42,7 @@
 					<div class="item item-text-wrap">
 						<div class="list">
 							<label>
-								<p>التّفْصيْلُ الموضوعِي {title}:<br />'هنا ينبغي ان يظهر التفصيل'</p>
+								<p>التّفْصيْلُ الموضوعِي {title}:<br />{meaning}</p>
 								<br />
 								<h2>ملاحظاتك:<br /> {note}</h2>
 								<span class="input-label">إضافة ملاحظة</span>

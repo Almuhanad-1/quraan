@@ -12,6 +12,7 @@
 
 	let modalTitle = 'title';
 	let location;
+	let meaning;
 	onMount(async () => {
 		try {
 			// Use the import() function to dynamically load the module
@@ -23,10 +24,10 @@
 	});
 
 	function openModal(data) {
-		console.log(showModal);
 		showModal = true;
 		modalTitle = data['from-to'].join('-');
 		location = data.location;
+		meaning = data.meaning;
 	}
 
 	function closeModal() {
@@ -37,7 +38,7 @@
 {#if sura}
 	<Header title={sura.name} />
 	{#if showModal}
-		<Modal title={modalTitle} {location} {closeModal} />
+		<Modal title={modalTitle} {location} {meaning} {closeModal} />
 	{/if}
 	<main>
 		<h2 class="basmalah">
