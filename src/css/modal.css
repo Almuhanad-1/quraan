@@ -1,0 +1,393 @@
+@font-face {
+	font-family: 'Ionicons';
+	src: url('../lib/ionic/fonts/ionicons.eot?v=2.0.1');
+	src: url('../lib/ionic/fonts/ionicons.eot?v=2.0.1#iefix') format('embedded-opentype'),
+		url('../lib/ionic/fonts/ionicons.ttf?v=2.0.1') format('truetype'),
+		url('../lib/ionic/fonts/ionicons.woff?v=2.0.1') format('woff'),
+		url('../lib/ionic/fonts/ionicons.woff') format('woff'),
+		url('../lib/ionic/fonts/ionicons.svg?v=2.0.1#Ionicons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/**
+ * Modals
+ * --------------------------------------------------
+ * Modals are independent windows that slide in from off-screen.
+ */
+.modal-backdrop,
+.modal-backdrop-bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+}
+
+.modal-backdrop-bg {
+	pointer-events: none;
+}
+
+.modal {
+	display: block;
+	position: absolute;
+	top: 0;
+	z-index: 10;
+	overflow: hidden;
+	min-height: 100%;
+	width: 100%;
+	background-color: #fff;
+}
+
+@media (min-width: 680px) {
+	.modal {
+		top: 20%;
+		right: 20%;
+		bottom: 20%;
+		left: 20%;
+		min-height: 240px;
+		width: 60%;
+	}
+	.modal.ng-leave-active {
+		bottom: 0;
+	}
+	.platform-ios.platform-cordova .modal-wrapper .modal .bar-header:not(.bar-subheader) {
+		height: 44px;
+	}
+	.platform-ios.platform-cordova .modal-wrapper .modal .bar-header:not(.bar-subheader) > * {
+		margin-top: 0;
+	}
+	.platform-ios.platform-cordova .modal-wrapper .modal .tabs-top > .tabs,
+	.platform-ios.platform-cordova .modal-wrapper .modal .tabs.tabs-top {
+		top: 44px;
+	}
+	.platform-ios.platform-cordova .modal-wrapper .modal .has-header,
+	.platform-ios.platform-cordova .modal-wrapper .modal .bar-subheader {
+		top: 44px;
+	}
+	.platform-ios.platform-cordova .modal-wrapper .modal .has-subheader {
+		top: 88px;
+	}
+	.platform-ios.platform-cordova .modal-wrapper .modal .has-header.has-tabs-top {
+		top: 93px;
+	}
+	.platform-ios.platform-cordova .modal-wrapper .modal .has-header.has-subheader.has-tabs-top {
+		top: 137px;
+	}
+	.modal-backdrop-bg {
+		-webkit-transition: opacity 300ms ease-in-out;
+		transition: opacity 300ms ease-in-out;
+		background-color: #000;
+		opacity: 0;
+	}
+	.active .modal-backdrop-bg {
+		opacity: 0.5;
+	}
+}
+
+.modal-open {
+	pointer-events: none;
+}
+.modal-open .modal,
+.modal-open .modal-backdrop {
+	pointer-events: auto;
+}
+.modal-open.loading-active .modal,
+.modal-open.loading-active .modal-backdrop {
+	pointer-events: none;
+}
+
+/**
+ * Cards and Inset Lists
+ * --------------------------------------------------
+ * A card and list-inset are close to the same thing, except a card as a box shadow.
+ */
+.card,
+.list-inset {
+	overflow: hidden;
+	margin: 20px 10px;
+	border-radius: 2px;
+	background-color: #fff;
+}
+
+.card {
+	padding-top: 1px;
+	padding-bottom: 1px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+.card .item {
+	border-left: 0;
+	border-right: 0;
+}
+.card .item:first-child {
+	border-top: 0;
+}
+.card .item:last-child {
+	border-bottom: 0;
+}
+
+.padding .card,
+.padding .list-inset {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.card .item:first-child,
+.list-inset .item:first-child,
+.padding > .list .item:first-child {
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+}
+.card .item:first-child .item-content,
+.list-inset .item:first-child .item-content,
+.padding > .list .item:first-child .item-content {
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+}
+
+.card .item:last-child,
+.list-inset .item:last-child,
+.padding > .list .item:last-child {
+	border-bottom-right-radius: 2px;
+	border-bottom-left-radius: 2px;
+}
+.card .item:last-child .item-content,
+.list-inset .item:last-child .item-content,
+.padding > .list .item:last-child .item-content {
+	border-bottom-right-radius: 2px;
+	border-bottom-left-radius: 2px;
+}
+
+.card .item:last-child,
+.list-inset .item:last-child {
+	margin-bottom: -1px;
+}
+
+.card .item,
+.list-inset .item,
+.padding > .list .item,
+.padding-horizontal > .list .item {
+	margin-right: 0;
+	margin-left: 0;
+}
+.card .item.item-input input,
+.list-inset .item.item-input input,
+.padding > .list .item.item-input input,
+.padding-horizontal > .list .item.item-input input {
+	padding-right: 44px;
+}
+
+.padding-left > .list .item {
+	margin-left: 0;
+}
+
+.padding-right > .list .item {
+	margin-right: 0;
+}
+
+/**
+ * Lists
+ * --------------------------------------------------
+ */
+.list {
+	position: relative;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 0;
+	margin-bottom: 20px;
+}
+
+.list:last-child {
+	margin-bottom: 0px;
+}
+.list:last-child.card {
+	margin-bottom: 40px;
+}
+
+/**
+ * List Header
+ * --------------------------------------------------
+ */
+.list-header {
+	margin-top: 20px;
+	padding: 5px 15px;
+	background-color: transparent;
+	color: #222;
+	font-weight: bold;
+}
+
+.card.list .list-item {
+	padding-right: 1px;
+	padding-left: 1px;
+}
+
+/**
+ * Cards and Inset Lists
+ * --------------------------------------------------
+ * A card and list-inset are close to the same thing, except a card as a box shadow.
+ */
+.card,
+.list-inset {
+	overflow: hidden;
+	margin: 20px 10px;
+	border-radius: 2px;
+	background-color: #fff;
+}
+
+.card {
+	padding-top: 1px;
+	padding-bottom: 1px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+.card .item {
+	border-left: 0;
+	border-right: 0;
+}
+.card .item:first-child {
+	border-top: 0;
+}
+.card .item:last-child {
+	border-bottom: 0;
+}
+
+.padding .card,
+.padding .list-inset {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.card .item:first-child,
+.list-inset .item:first-child,
+.padding > .list .item:first-child {
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+}
+.card .item:first-child .item-content,
+.list-inset .item:first-child .item-content,
+.padding > .list .item:first-child .item-content {
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+}
+
+.card .item:last-child,
+.list-inset .item:last-child,
+.padding > .list .item:last-child {
+	border-bottom-right-radius: 2px;
+	border-bottom-left-radius: 2px;
+}
+.card .item:last-child .item-content,
+.list-inset .item:last-child .item-content,
+.padding > .list .item:last-child .item-content {
+	border-bottom-right-radius: 2px;
+	border-bottom-left-radius: 2px;
+}
+
+.card .item:last-child,
+.list-inset .item:last-child {
+	margin-bottom: -1px;
+}
+
+.card .item,
+.list-inset .item,
+.padding > .list .item,
+.padding-horizontal > .list .item {
+	margin-right: 0;
+	margin-left: 0;
+}
+.card .item.item-input input,
+.list-inset .item.item-input input,
+.padding > .list .item.item-input input,
+.padding-horizontal > .list .item.item-input input {
+	padding-right: 44px;
+}
+
+.padding-left > .list .item {
+	margin-left: 0;
+}
+
+.padding-right > .list .item {
+	margin-right: 0;
+}
+
+/**
+ * Badges
+ * --------------------------------------------------
+ */
+.badge {
+	background-color: transparent;
+	color: #aaaaaa;
+	z-index: 1;
+	display: inline-block;
+	padding: 3px 8px;
+	min-width: 10px;
+	border-radius: 10px;
+	vertical-align: baseline;
+	text-align: center;
+	white-space: nowrap;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 16px;
+}
+.badge:empty {
+	display: none;
+}
+
+.tabs .tab-item .badge.badge-light,
+.badge.badge-light {
+	background-color: #fff;
+	color: #444;
+}
+
+.tabs .tab-item .badge.badge-stable,
+.badge.badge-stable {
+	background-color: #f8f8f8;
+	color: #444;
+}
+
+.tabs .tab-item .badge.badge-positive,
+.badge.badge-positive {
+	background-color: #387ef5;
+	color: #fff;
+}
+
+.tabs .tab-item .badge.badge-calm,
+.badge.badge-calm {
+	background-color: #11c1f3;
+	color: #fff;
+}
+
+.tabs .tab-item .badge.badge-assertive,
+.badge.badge-assertive {
+	background-color: #ef473a;
+	color: #fff;
+}
+
+.tabs .tab-item .badge.badge-balanced,
+.badge.badge-balanced {
+	background-color: #33cd5f;
+	color: #fff;
+}
+
+.tabs .tab-item .badge.badge-energized,
+.badge.badge-energized {
+	background-color: #ffc900;
+	color: #fff;
+}
+
+.tabs .tab-item .badge.badge-royal,
+.badge.badge-royal {
+	background-color: #886aea;
+	color: #fff;
+}
+
+.tabs .tab-item .badge.badge-dark,
+.badge.badge-dark {
+	background-color: #444;
+	color: #fff;
+}
+
+.button .badge {
+	position: relative;
+	top: -1px;
+}

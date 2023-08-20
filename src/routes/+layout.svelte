@@ -1,3 +1,9 @@
+<script>
+	// import '../css/ionic.app.css';
+	// import '../css/ionic.app.min.css';
+	// import '../css/modal.css';
+</script>
+
 <slot />
 
 <style>
