@@ -1,8 +1,8 @@
 <script>
 	import { onMount } from 'svelte';
-	import Header from '../../../components/header.svelte';
+	import Header from '../../../components/header/header.svelte';
 	import Modal from '../../../components/modal/modal.svelte';
-
+	import './sura.css';
 	export let data;
 
 	let showModal = false;
@@ -58,25 +58,4 @@
 {/if}
 
 <style>
-	.basmalah {
-		background-color: #738494;
-		color: #ddd;
-		width: 100%;
-		text-align: center;
-		padding: 10px;
-		font-size: 28px;
-		font-weight: 300;
-		font-family: 'Segoe UI', Roboto, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-	}
-	.sura-ayat {
-		text-align: justify;
-		text-justify: inter-word;
-	}
-	.sura-ayat b {
-		padding: 10px;
-		line-height: 3;
-		word-spacing: 1px;
-		font-size: 14px;
-		font-weight: normal;
-	}
 </style>

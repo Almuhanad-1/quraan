@@ -1,12 +1,12 @@
 <script>
-	import Header from '../../components/header.svelte';
+	import Header from '../../components/header/header.svelte';
 	export let data;
 </script>
 
 <Header title="الفهرس" backBtn={false} />
 
 <ul>
-	{#each data.menuList as { title, id }}
+	{#each data.playlist as { title, id }}
 		<li><a href="/sura/{id}">{id} - {title}</a></li>
 	{/each}
 </ul>

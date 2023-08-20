@@ -1,6 +1,6 @@
 <div>
 	<h1>
-		Hello to my project you can start <a href="/menu">from here</a>
+		Hello to my project you can start <a href="/playlist">from here</a>
 	</h1>
 	<p>This homepage will be developed and used later</p>
 </div>

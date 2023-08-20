@@ -1,4 +1,4 @@
-export const menuList = [
+export const playlist = [
   { title: "سورة الفاتحة ", id: 1 },
   { title: "سورة البقرة ", id: 2 },
   { title: "سورة ال عمران ", id: 3 },

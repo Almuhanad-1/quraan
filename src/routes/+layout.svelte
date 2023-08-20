@@ -1,8 +1,9 @@
-<script>
-	// import '../css/ionic.app.css';
-	// import '../css/ionic.app.min.css';
-	// import '../css/modal.css';
-</script>
+<svelte:head>
+	<link
+		rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+	/>
+</svelte:head>
 
 <slot />
 
