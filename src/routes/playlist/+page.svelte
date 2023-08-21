@@ -1,5 +1,5 @@
 <script>
-	import Header from '$lib/header/header.svelte';
+	import Header from '$lib/Header/Header.svelte';
 	export let data;
 </script>
 
