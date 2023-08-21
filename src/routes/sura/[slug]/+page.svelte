@@ -1,27 +1,27 @@
 <script>
 	import { onMount } from 'svelte';
-	import Header from '../../../components/header/header.svelte';
-	import Modal from '../../../components/modal/modal.svelte';
+	import Header from '$lib/Header/Header.svelte';
+	import Modal from '$lib/Modal/Modal.svelte';
+	import Loader from '$lib/Loader/Loader.svelte';
 	import './sura.css';
 	export let data;
 
 	let showModal = false;
 
-	let id = data.id; // Your dynamic id
-	let sura; // To hold the imported data
+	let sura = data.sura; // To hold the imported data
 
 	let modalTitle = 'title';
 	let location;
 	let meaning;
-	onMount(async () => {
-		try {
-			// Use the import() function to dynamically load the module
-			const dynamicModule = await import(`../../../lib/surasData/${id}.json`);
-			sura = dynamicModule.default; // Assuming your data is the default export
-		} catch (error) {
-			console.error(error);
-		}
-	});
+	// onMount(async () => {
+	// 	try {
+	// 		// Use the import() function to dynamically load the module
+	// 		const dynamicModule = await import(`../../../data/suras/${id}.json`);
+	// 		sura = dynamicModule.default; // Assuming your data is the default export
+	// 	} catch (error) {
+	// 		console.error(error);
+	// 	}
+	// });
 
 	function openModal(data) {
 		showModal = true;
@@ -55,8 +55,16 @@
 		</div>
 	</main>
 {:else}
-	<p>جاري التحميل ...</p>
+	<div class="center">
+		<Loader color="#444" size="70" />
+	</div>
 {/if}
 
 <style>
+	.center {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		display: flex;
+	}
 </style>

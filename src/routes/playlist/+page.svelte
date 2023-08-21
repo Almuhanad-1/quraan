@@ -1,15 +1,16 @@
 <script>
-	import Header from '../../components/header/header.svelte';
+	import Header from '$lib/header/header.svelte';
 	export let data;
 </script>
 
 <Header title="الفهرس" backBtn={false} />
-
-<ul>
-	{#each data.playlist as { title, id }}
-		<li><a href="/sura/{id}">{id} - {title}</a></li>
-	{/each}
-</ul>
+<main>
+	<ul>
+		{#each data.playlist as { title, id }}
+			<li><a href="/sura/{id}">{id} - {title}</a></li>
+		{/each}
+	</ul>
+</main>
 
 <style>
 	ul li {
