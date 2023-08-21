@@ -17,11 +17,11 @@ This is a migrated svelte project from the [Qra-anAltahjjod](https://github.com/
 
 ### Playlist page:
 
-[Playlist page screenshot](/playlist.png)
+<img src="/playlist.png" />
 
 ### Sura page:
 
-[Sura page screenshot](/sura.png)
+<img src="/sura.png" />
 
 ## Installation
 
