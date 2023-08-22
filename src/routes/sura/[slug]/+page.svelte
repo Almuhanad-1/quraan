@@ -1,5 +1,6 @@
 <script>
-	import { onMount } from 'svelte';
+	import { fade } from 'svelte/transition';
+
 	import Header from '$lib/Header/Header.svelte';
 	import Modal from '$lib/Modal/Modal.svelte';
 	import Loader from '$lib/Loader/Loader.svelte';
@@ -13,15 +14,6 @@
 	let modalTitle = 'title';
 	let location;
 	let meaning;
-	// onMount(async () => {
-	// 	try {
-	// 		// Use the import() function to dynamically load the module
-	// 		const dynamicModule = await import(`../../../data/suras/${id}.json`);
-	// 		sura = dynamicModule.default; // Assuming your data is the default export
-	// 	} catch (error) {
-	// 		console.error(error);
-	// 	}
-	// });
 
 	function openModal(data) {
 		showModal = true;
@@ -38,7 +30,9 @@
 {#if sura}
 	<Header title={sura.name} />
 	{#if showModal}
-		<Modal title={modalTitle} {location} {meaning} {closeModal} />
+		<div in:fade={{ duration: 150 }} out:fade={{ duration: 300 }}>
+			<Modal title={modalTitle} {location} {meaning} {closeModal} />
+		</div>
 	{/if}
 	<main>
 		<h2 class="basmalah">

@@ -1,3 +1,29 @@
+<script>
+	import { linear } from 'svelte/easing';
+	import { slide, fly } from 'svelte/transition';
+
+	export let data;
+
+	let dir = -1;
+	$: if (data.url === '/playlist') {
+		dir = 1;
+	} else dir = -1;
+
+	// $: console.log(dir);
+	// function transition(node, { delay = 0, duration = 300, easing = linear }) {
+	// 	return {
+	// 		delay,
+	// 		duration,
+	// 		easing,
+	// 		css: (t, u) => {
+	// 			return `
+	// 			transform: translateX(${u * 100 * dir}%);
+	// 		`;
+	// 		}
+	// 	};
+	// }
+</script>
+
 <svelte:head>
 	<link
 		rel="stylesheet"
@@ -5,7 +31,12 @@
 	/>
 </svelte:head>
 
+<!-- {#key data.url}
+	<div in:fly={{ x: -300 * dir, delay: 0, duration: 1000 }} out:fly={{ x: 300 * dir, duration: 0 }}> -->
 <slot />
+
+<!-- </div>
+{/key} -->
 
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
@@ -25,4 +56,9 @@
 		overflow-x: hidden;
 		font-family: 'Cairo', sans-serif;
 	}
+
+	/* div {
+		width: 100vw;
+		height: 100vh;
+	} */
 </style>

@@ -1,22 +1,49 @@
-# create-svelte
+# Quraan Svelte App
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+This is a migrated svelte project from the [Qra-anAltahjjod](https://github.com/Muslim-Developers/Qra-anAltahjjod) project which was build by Ionic framework version 1
 
-## Creating a project
+## Table of Contents
 
-If you're seeing this, you've probably already done this step. Congrats!
+- [Live Demo](#live-demo)
+- [Screenshots](#screenshots)
+- [Installation](#installation)
+- [Contributing](#contributing)
+
+## Live Demo
+
+[Live Demo](quraan-phi.vercel.app/playlist)
+
+## Screenshots
+
+### Playlist page:
+
+<img src="/playlist.png" />
+
+### Sura page:
+
+<img src="/sura.png" />
+
+## Installation
+
+1. Clone the repository to your local machine:
 
 ```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+git clone https://github.com/Almuhanad-1/quraan.git
 ```
 
-## Developing
+2. Navigate to the project directory:
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+```bash
+cd quraan
+```
+
+3. Install the dependencies:
+
+```bash
+npm install
+```
+
+4. Start a development server:
 
 ```bash
 npm run dev
@@ -25,14 +52,6 @@ npm run dev
 npm run dev -- --open
 ```
 
-## Building
+## Contributing
 
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+Contributions to Whats-GPT-Firebase are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
